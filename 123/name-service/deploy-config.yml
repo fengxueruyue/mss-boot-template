@@ -1,0 +1,14 @@
+project: test
+service: name
+ports:
+  - port: 9090
+    targetPort: 9090
+    name: grpc
+metrics:
+  scrape: true
+  port: 5000
+  path: /metrics
+hpa: false
+config:
+  - name: test-name-config
+    path: /app/cfg
